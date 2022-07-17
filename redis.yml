@@ -17,6 +17,8 @@ spec:
             - name: redis
               image: bitnami/redis:latest
               env:
+                - name: REDIS_AOF_ENABLED
+                  value: "no"
                 - name: REDIS_PASSWORD
                   valueFrom:
                     secretKeyRef:
